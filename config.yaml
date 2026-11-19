@@ -1,0 +1,33 @@
+# Edit paths / keys, then: python run_scib_benchmark.py
+
+input_h5ad: "/path/to/your_snrnaseq.h5ad"
+output_dir: "./results"
+
+batch_key: "sample_id"
+label_key: "cell_type"
+counts_layer: "counts"
+
+n_top_genes: 3000
+n_pcs: 50
+n_neighbors: 15
+n_latent: 30
+max_epochs: 200
+scpoli_epochs: 100
+random_state: 42
+
+# set to an int for a quick test run, or null to use all cells
+max_cells: null
+
+methods:
+  pca: true
+  harmony: true
+  scanorama: true
+  combat: true
+  bbknn: true
+  scvi: true
+  scanvi: true
+  scpoli: true
+  seurat_v3: true
+  seurat_v4: true
+  css_pearson: true
+  css_spearman: true
